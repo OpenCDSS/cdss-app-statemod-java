@@ -1,0 +1,6 @@
+# Repositories that comprise StateMod Java
+# - assumes that local folder name will match the repository name
+cdss-app-statemod-java
+cdss-lib-cdss-java
+cdss-lib-common-java
+cdss-lib-models-java
