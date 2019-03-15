@@ -4,3 +4,4 @@ cdss-app-statemod-java
 cdss-lib-cdss-java
 cdss-lib-common-java
 cdss-lib-models-java
+cdss-util-buildtools
