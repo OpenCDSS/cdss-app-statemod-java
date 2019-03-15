@@ -26,7 +26,7 @@ See the following sections in this page:
 * [Repository Folder Structure](#repository-folder-structure)
 * [Repository Dependencies](#repository-dependencies)
 * [Development Environment Folder Structure](#development-environment-folder-structure)
-* [Development Environment Setiup](#development-environment-setup)
+* [Development Environment Setup](#development-environment-setup)
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
@@ -84,6 +84,7 @@ such as documentation managed with command line Git or other Git tools.
 |[`cdss-lib-cdss-java`](https://github.com/OpenCDSS/cdss-lib-cdss-java)                            |Y |Library that is shared between CDSS components.|
 |[`cdss-lib-common-java`](https://github.com/OpenCDSS/cdss-lib-common-java)                        |Y |Library of core utility code used by multiple repos.|
 |[`cdss-lib-models-java`](https://github.com/OpenCDSS/cdss-lib-models-java)                        |Y |Library to read/write CDSS StateCU and StateMod model files.|
+|[`cdss-util-buildtools`](https://github.com/OpenCDSS/cdss-util-buildtools)                        |Y |Tools to create CDSS Java software installers .|
 
 ### Plugin Repositories ###
 
@@ -119,7 +120,7 @@ C:\Users\user\                               Windows user home folder (typical d
         ...others may be added...
 ```
 
-## Development Environment Setiup ##
+## Development Environment Setup ##
 
 See the [Development Environment README](doc-dev/README.md).
 
