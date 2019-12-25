@@ -1,8 +1,8 @@
 # cdss-app-statemod-java #
 
-This repository contains the StateMod main application source code and supporting files for the development environment
-for the prototype Java version of StateMod.
-**This is a pilot project to evaluate possible other languages for next generation StateMod,
+This repository contains the StateMod main application source code and supporting
+development environment files for the prototype Java StateMod version.
+**This is a pilot project to evaluate possible alternate languages for next generation StateMod,
 with goal being to move StateMod to a language that is more easily enhanced and maintained.**
 
 Multiple other repositories are used to create the StateMod Java application.
@@ -14,12 +14,10 @@ StateMod is part of
 See the following online resources:
 
 * [Colorado's Decision Support Systems](https://www.colorado.gov/cdss)
-* [OpenCDSS](http://learn.openwaterfoundation.org/cdss-website-opencdss/) - currently
-hosted on the Open Water Foundation website while the OpenCDSS server is configured
-* [StateMod (Fortran) Developer Documentation](http://learn.openwaterfoundation.org/cdss-app-statemod-fortran-doc-dev/) - currently
-hosted on the Open Water Foundation website while the OpenCDSS server is configured
-* [StateMod (Fortran) User Documentation](http://learn.openwaterfoundation.org/cdss-app-statemod-fortran-doc-user/) - currently
-hosted on the Open Water Foundation website while the OpenCDSS server is configured
+* [OpenCDSS](http://opencdss.state.co.us/opencdss/)
+* [OpenCDSS StateMod](http://opencdss.state.co.us/opencdss/statemod/)
+* [StateMod (Fortran) Developer Documentation](http://opencdss.state.co.us/statemod/latest/doc-dev/)
+* [StateMod (Fortran) User Documentation](http://opencdss.state.co.us/statemod/latest/doc-user/)
 
 See the following sections in this page:
 
@@ -54,9 +52,15 @@ cdss-app-statemod-java/       StateMod source code and development working files
   LICENSE.md                  StateMod Java license file.
   README.md                   This file.
   resources/                  Additional resources, such as runtime files for installer.
-  eclipse-scripts/            Eclipse run and external tools configurations.
+  eclipse-scripts/            Eclipse run and external tools configurations,
+                              used to run StateMod from Eclipse.
   src/                        StateMod Java main application source code.
-  test/                       Unit tests using JUnit.
+  test/                       Automated tests.
+    datasets/                 Full StateMod test datasets.
+      cdss-yampa/             Yampa dataset copied from CDSS, small dataset.
+        StateMod/             Standard StateMod folder from CDSS dataset.
+      cdss-cm2015/            Colorado dataset - this and datasets other than cdss-yampa
+                              are ignored from the repository.
 ```
 
 ## Repository Dependencies ##
@@ -79,18 +83,18 @@ but files are often edited external to Eclipse.
 such as documentation managed with command line Git or other Git tools.
 
 |**Repository**|**Eclipse project?**|**Description**|
-|-------------------------------------------------------------------------------------------------------------|--|----------------------------------------------------|
-|`cdss-app-statemod-java`                                                                                       |Y |StateMod Java main application code (this repo).|
-|[`cdss-lib-cdss-java`](https://github.com/OpenCDSS/cdss-lib-cdss-java)                            |Y |Library that is shared between CDSS components.|
-|[`cdss-lib-common-java`](https://github.com/OpenCDSS/cdss-lib-common-java)                        |Y |Library of core utility code used by multiple repos.|
-|[`cdss-lib-models-java`](https://github.com/OpenCDSS/cdss-lib-models-java)                        |Y |Library to read/write CDSS StateCU and StateMod model files.|
-|[`cdss-util-buildtools`](https://github.com/OpenCDSS/cdss-util-buildtools)                        |Y |Tools to create CDSS Java software installers .|
+|----------------------------------------------------------------------------|--|----------------------------------------------------|
+|`cdss-app-statemod-java`                                                    |Y |StateMod Java main application code (this repository).|
+|[`cdss-lib-cdss-java`](https://github.com/OpenCDSS/cdss-lib-cdss-java)      |Y |Library that is shared between CDSS components.|
+|[`cdss-lib-common-java`](https://github.com/OpenCDSS/cdss-lib-common-java)  |Y |Library of core utility code used by multiple repos.|
+|[`cdss-lib-models-java`](https://github.com/OpenCDSS/cdss-lib-models-java)  |Y |Library to read/write CDSS StateCU and StateMod model files.|
+|[`cdss-util-buildtools`](https://github.com/OpenCDSS/cdss-util-buildtools)  |Y |Tools to create CDSS Java software installers .|
 
 ### Plugin Repositories ###
 
 Plugins may be an option to extend StateMod Java functionality,
 for example to allow custom operating rules or reports.
-Plugins may be prototyped in the evaluation project if budget allows.
+Plugins are being implemented in TSTool and a similar approach could be taken in Java StateMod.
 
 ### Repositories that Depend on StateMod Java Repository ###
 
@@ -106,17 +110,20 @@ scripts in those repositories to work.
 ```
 C:\Users\user\                               Windows user home folder (typical development environment).
 /home/user/                                  Linux user home folder (not tested).
+/C/Users/user                                Git Bash user folder (used for prototype).
 /cygdrive/C/Users/user                       Cygdrive home folder (not tested).
   cdss-dev/                                  Projects that are part of Colorado's Decision Support Systems.
     StateMod-Java/                           StateMod Java product folder.
 ------------------ below this line folders should match exactly ------------------------
       eclipse-workspace/                     Folder for Eclipse workspace, which references Git repository folders.
-                                             The workspace folder is not maintained in Git.
+                                             The workspace folder is not maintained in Git but refers
+                                             to the folders below.
       git-repos/                             Git repositories for StateMod Java.
         cdss-app-statemod-java/              See repository dependency list above.
         cdss-lib-cdss-java/
         cdss-lib-common-java/
         cdss-lib-models-java/
+        cdss-util-buildtools/
         ...others may be added...
 ```
 

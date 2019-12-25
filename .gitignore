@@ -4,6 +4,11 @@
 # Ignore the distribution folder created for local distribution and setup.exe files
 /dist
 
+# Ignore test datasets, other than yampa
+# - yampa dataset is included in the repository as a simple example
+/test
+!/test/datasets/cdss-yampa/StateMod
+
 # Ignore log files
 *.log
 
