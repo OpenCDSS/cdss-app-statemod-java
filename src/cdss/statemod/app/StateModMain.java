@@ -144,7 +144,9 @@ public class StateModMain {
 				boolean useGUI = false; // No UI is defined
 				JFrame parent = null; // A JFrame if UI is used, not implemented here
 				dataset = new StateMod_DataSet();
+				printMemory(routine,"Memory before reading dataset...");
 				dataset.readStateModFile(responseFile, readData, readTimeSeries, useGUI, parent);
+				printMemory(routine,"Memory after reading dataset...");
 			}
 			catch ( Exception e2 ) {
 				Message.printWarning(1, routine, "Error reading response file.  See the log file.");
@@ -268,6 +270,19 @@ public class StateModMain {
 				}
 			}
 		}
+	}
+	
+	/**
+	 * Print memory information.
+	 * @param routine calling routine
+	 * @param message message to output
+	 */
+	private static void printMemory ( String routine, String message ) {
+		Runtime runtime = Runtime.getRuntime();
+		Message.printStatus(1,routine,"Memory before reading dataset...");
+		Message.printStatus(1,routine,"Maximum:          " + runtime.maxMemory() + "bytes" );
+		Message.printStatus(1,routine,"Total allocated:  " + runtime.totalMemory() + "bytes" );
+		Message.printStatus(1,routine,"Free:             " + runtime.freeMemory() + "bytes" );
 	}
 
 	/*
