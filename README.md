@@ -9,6 +9,11 @@ Multiple other repositories are used to create the StateMod Java application.
 Eclipse is used for development and repositories currently contain Eclipse project files to facilitate
 setting up the Eclipse development environment.
 
+* Java:  this repository
+* C#:  [cdss-app-statemod-cs](https://github.com/OpenCDSS/cdss-app-statemod-cs)
+* Fortran 2008:  [cdss-app-statemod-f2008](https://github.com/OpenCDSS/cdss-app-statemod-f2008)
+* Python:  [cdss-app-statemod-python](https://github.com/OpenCDSS/cdss-app-statemod-python)
+
 StateMod is part of
 [Colorado's Decision Support Systems (CDSS)](https://www.colorado.gov/cdss).
 See the following online resources:
@@ -47,17 +52,15 @@ cdss-app-statemod-java/       StateMod source code and development working files
   bin/                        Eclipse folder for compiled files (dynamic so ignored from repo).
   build-util/                 Utility scripts used in development environment.
   doc-dev/                    Development environment documentation.
-  dist/                       Folder used to build distributable installer (ignored from repo).
-  lib/                        Third-party libraries.
+  eclipse-scripts/            Eclipse run and external tools configurations,
+                              used to run StateMod from Eclipse.
   LICENSE.md                  StateMod Java license file.
   README.md                   This file.
   resources/                  Additional resources, such as runtime files for installer.
-  eclipse-scripts/            Eclipse run and external tools configurations,
-                              used to run StateMod from Eclipse.
   src/                        StateMod Java main application source code.
   test/                       Automated tests.
     datasets/                 Full StateMod test datasets.
-      cdss-yampa/             Yampa dataset copied from CDSS, small dataset.
+      cdss-ym2015/            Yampa dataset copied from CDSS, small dataset.
         StateMod/             Standard StateMod folder from CDSS dataset.
       cdss-cm2015/            Colorado dataset - this and datasets other than cdss-yampa
                               are ignored from the repository.
@@ -89,12 +92,6 @@ such as documentation managed with command line Git or other Git tools.
 |[`cdss-lib-common-java`](https://github.com/OpenCDSS/cdss-lib-common-java)  |Y |Library of core utility code used by multiple repos.|
 |[`cdss-lib-models-java`](https://github.com/OpenCDSS/cdss-lib-models-java)  |Y |Library to read/write CDSS StateCU and StateMod model files.|
 |[`cdss-util-buildtools`](https://github.com/OpenCDSS/cdss-util-buildtools)  |Y |Tools to create CDSS Java software installers .|
-
-### Plugin Repositories ###
-
-Plugins may be an option to extend StateMod Java functionality,
-for example to allow custom operating rules or reports.
-Plugins are being implemented in TSTool and a similar approach could be taken in Java StateMod.
 
 ### Repositories that Depend on StateMod Java Repository ###
 
