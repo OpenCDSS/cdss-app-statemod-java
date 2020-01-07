@@ -8,6 +8,6 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="cdss.statemod.app.StateModMain"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--sim ${project_loc}/test/datasets/cdss-yampa/StateMod/ym2015H.rsp"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--sim ${project_loc}/test/datasets/cdss-ym2015/StateMod/ym2015H.rsp"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="cdss-app-statemod-java"/>
 </launchConfiguration>

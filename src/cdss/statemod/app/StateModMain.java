@@ -279,7 +279,7 @@ public class StateModMain {
 	 */
 	private static void printMemory ( String routine, String message ) {
 		Runtime runtime = Runtime.getRuntime();
-		Message.printStatus(1,routine,"Memory before reading dataset...");
+		Message.printStatus(1,routine,message);
 		Message.printStatus(1,routine,"Maximum:          " + runtime.maxMemory() + "bytes" );
 		Message.printStatus(1,routine,"Total allocated:  " + runtime.totalMemory() + "bytes" );
 		Message.printStatus(1,routine,"Free:             " + runtime.freeMemory() + "bytes" );
@@ -380,7 +380,7 @@ public class StateModMain {
 			// Reset the working directory to that of the response file, in case it changed from above logic
 			workingDir = f.getParent();
 		}
-		else {
+		else if ( !responseFileAbsolute.endsWith(".rsp") ) {
 			// Try adding the extension
 			String responseFileAbsolute2 = responseFileAbsolute + ".rsp";
 			File f2 = new File(responseFileAbsolute2);
